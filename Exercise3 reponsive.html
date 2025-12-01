@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Responsive Flex Layout</title>
+
+<style>
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+}
+
+header, footer {
+  background: #333;
+  color: white;
+  padding: 15px;
+  text-align: center;
+}
+
+.main-container {
+  display: flex;
+  flex-direction: column;
+  padding: 15px;
+}
+
+.content, .sidebar {
+  background: #f2f2f2;
+  margin: 10px 0;
+  padding: 20px;
+  border-radius: 10px;
+}
+
+
+@media (min-width: 600px) and (max-width: 900px) {
+
+  header, footer {
+    padding: 25px;
+    font-size: 20px;
+  }
+
+  .main-container {
+    flex-direction: row;
+  }
+
+  .content {
+    flex: 2;
+  }
+
+  .sidebar {
+    flex: 1;
+  }
+}
+
+@media (min-width: 900px) {
+
+  header, footer {
+    padding: 35px;
+    font-size: 24px;
+  }
+
+  .main-container {
+    flex-direction: row;
+  }
+
+  .content {
+    flex: 3;
+  }
+
+  .sidebar {
+    flex: 1;
+  }
+}
+</style>
+
+</head>
+<body>
+
+<header>Responsive Header</header>
+
+<div class="main-container">
+  <div class="content">Main Content Area</div>
+  <div class="sidebar">Sidebar Area</div>
+</div>
+
+<footer>Responsive Footer</footer>
+
+</body>
+</html>

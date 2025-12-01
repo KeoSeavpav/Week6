@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Student Registration Form</title>
+
+<style>
+  body {
+    font-family: Arial, sans-serif;
+    background: #eef1f5;
+    margin: 0;
+    padding: 40px;
+  }
+
+  .form-container {
+    width: 600px;
+    max-width: 90%;
+    margin: auto;
+    background: white;
+    padding: 25px 35px;
+    border-radius: 15px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+  }
+
+  h2 {
+    text-align: center;
+    margin-bottom: 20px;
+    color: #333;
+  }
+
+  label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: bold;
+  }
+
+  input[type="text"],
+  input[type="email"],
+  input[type="number"],
+  input[type="color"],
+  input[type="file"],
+  select,
+  textarea {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 18px;
+    border: 2px solid #ccc;
+    border-radius: 8px;
+    transition: 0.2s;
+  }
+
+  input:focus,
+  select:focus,
+  textarea:focus {
+    border-color: #007bff;
+    background: #e7f1ff;
+    outline: none;
+  }
+
+  /* Radio + Checkbox containers */
+  .option-group {
+    margin-bottom: 15px;
+  }
+
+  .option-group label {
+    font-weight: normal;
+    margin-right: 15px;
+  }
+
+  input[type="radio"],
+  input[type="checkbox"] {
+    transform: scale(1.2);
+    margin-right: 5px;
+    accent-color: #007bff;
+  }
+
+  /* Range styling */
+  .range-box {
+    margin-bottom: 20px;
+  }
+
+  input[type="range"] {
+    width: 100%;
+  }
+
+  /* Submit button */
+  .submit-btn {
+    width: 100%;
+    padding: 12px;
+    background: #007bff;
+    border: none;
+    color: white;
+    font-size: 18px;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: 0.2s;
+  }
+
+  .submit-btn:hover {
+    background: #005fcc;
+  }
+</style>
+</head>
+<body>
+
+<div class="form-container">
+  <h2>Student Registration Form</h2>
+
+  <form>
+
+
+    <label>Full Name</label>
+    <input type="text" placeholder="Enter your name">
+
+
+    <label>Email</label>
+    <input type="email" placeholder="Enter your email">
+
+    <label>Age</label>
+    <input type="number" min="10" max="100">
+
+    <label>Gender</label>
+    <div class="option-group">
+      <label><input type="radio" name="gender"> Male</label>
+      <label><input type="radio" name="gender"> Female</label>
+     
+    </div>
+
+  
+    <label>Skills</label>
+    <div class="option-group">
+      <label><input type="checkbox"> HTML</label>
+      <label><input type="checkbox"> CSS</label>
+      <label><input type="checkbox"> JavaScript</label>
+      <label><input type="checkbox"> Python</label>
+    </div>
+
+    <label>Experience Level</label>
+    <div class="range-box">
+      <input type="range" min="0" max="10">
+    </div>
+
+  
+    <label>Department</label>
+    <select>
+      <option>Computer Science</option>
+      <option>Information Technology</option>
+      <option>Digital Business</option>
+      <option>Cybersecurity</option>
+    </select>
+
+    <label>Choose Your Favorite Color</label>
+    <input type="color">
+
+
+    <label>Upload Profile Photo</label>
+    <input type="file">
+
+  
+    <label>Comments</label>
+    <textarea rows="5" placeholder="Write something..."></textarea>
+
+
+    <button class="submit-btn">Submit</button>
+
+  </form>
+</div>
+
+</body>
+</html>

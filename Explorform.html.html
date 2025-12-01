@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>W6 Explore - Forms</title>
+
+<style>
+  body {
+    font-family: Arial, sans-serif;
+    background: #f4f4f4;
+    margin: 0;
+    padding: 40px;
+  }
+
+  .form-box {
+    background: white;
+    width: 500px;
+    max-width: 95%;
+    margin: auto;
+    padding: 25px 35px;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+  }
+
+  h2 {
+    text-align: center;
+    margin-bottom: 20px;
+    color: #333;
+  }
+
+  label {
+    display: block;
+    font-weight: bold;
+    margin-bottom: 6px;
+  }
+
+  input[type="text"],
+  input[type="email"],
+  input[type="password"],
+  input[type="number"],
+  input[type="date"],
+  select,
+  textarea {
+    width: 100%;
+    padding: 10px;
+    border: 2px solid #ccc;
+    border-radius: 8px;
+    margin-bottom: 18px;
+    transition: 0.2s;
+  }
+
+  input:focus,
+  select:focus,
+  textarea:focus {
+    border-color: #0066ff;
+    background: #eaf1ff;
+    outline: none;
+  }
+
+  .option-group label {
+    font-weight: normal;
+    margin-right: 15px;
+  }
+
+  .option-group input[type="radio"],
+  .option-group input[type="checkbox"] {
+    transform: scale(1.2);
+    accent-color: #0066ff;
+    margin-right: 5px;
+  }
+
+  input[type="range"] {
+    width: 100%;
+    margin-top: 10px;
+    margin-bottom: 20px;
+  }
+
+  .submit-btn {
+    width: 100%;
+    padding: 12px;
+    border: none;
+    background: #0066ff;
+    color: white;
+    font-size: 18px;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: 0.2s;
+  }
+
+  .submit-btn:hover {
+    background: #004fcc;
+  }
+</style>
+
+</head>
+<body>
+
+<div class="form-box">
+  <h2>User Information Form</h2>
+
+  <form>
+
+    <!-- TEXT INPUT -->
+    <label for="name">Full Name</label>
+    <input type="text" id="name" placeholder="Enter your name" required>
+
+    <!-- EMAIL -->
+    <label for="email">Email Address</label>
+    <input type="email" id="email" placeholder="Enter your email" required>
+
+    <!-- PASSWORD -->
+    <label for="password">Password</label>
+    <input type="password" id="password" placeholder="Enter a password">
+
+    <!-- NUMBER INPUT -->
+    <label for="age">Age</label>
+    <input type="number" id="age" min="10" max="100" placeholder="Enter your age">
+
+    <!-- RADIO BUTTONS -->
+    <label>Gender</label>
+    <div class="option-group">
+      <label><input type="radio" name="gender" value="male"> Male</label>
+      <label><input type="radio" name="gender" value="female"> Female</label>
+      <label><input type="radio" name="gender" value="other"> Other</label>
+    </div>
+
+    <!-- CHECKBOX -->
+    <label><input type="checkbox" id="newsletter"> Subscribe to Newsletter</label>
+
+    <!-- DATE -->
+    <label for="birthdate">Birthdate</label>
+    <input type="date" id="birthdate">
+
+    <!-- DROPDOWN -->
+    <label for="country">Country</label>
+    <select id="country">
+      <option value="">Select a country</option>
+      <option>Cambodia</option>
+      <option>Thailand</option>
+      <option>Vietnam</option>
+      <option>Laos</option>
+      <option>USA</option>
+    </select>
+
+    <!-- SLIDER -->
+    <label for="level">Satisfaction Level (0–100)</label>
+    <input type="range" id="level" min="0" max="100">
+
+    <!-- SUBMIT BUTTON -->
+    <button class="submit-btn" type="submit">Submit Form</button>
+
+  </form>
+</div>
+
+</body>
+</html>

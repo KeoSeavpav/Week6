@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Responsive Navbar</title>
+
+<style>
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+}
+
+nav {
+  background: #333;
+  padding: 15px;
+  color: white;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+nav ul {
+  list-style: none;
+  display: flex;
+  gap: 20px;
+}
+
+nav ul li a {
+  color: white;
+  text-decoration: none;
+}
+
+.menu-btn {
+  font-size: 22px;
+  display: none;
+  cursor: pointer;
+}
+
+
+@media(max-width: 768px) {
+
+  nav ul {
+    display: none;
+    flex-direction: column;
+    background: #444;
+    padding: 15px;
+    margin-top: 10px;
+  }
+
+  nav ul.show {
+    display: flex;
+  }
+
+  .menu-btn {
+    display: block;
+  }
+}
+</style>
+
+</head>
+<body>
+
+<nav>
+  <h2>MySite</h2>
+  <span class="menu-btn" onclick="toggleMenu()">☰</span>
+
+  <ul id="menu">
+    <li><a href="#">Home</a></li>
+    <li><a href="#">Products</a></li>
+    <li><a href="#">Contact</a></li>
+  </ul>
+</nav>
+
+<script>
+function toggleMenu() {
+  document.getElementById("menu").classList.toggle("show");
+}
+</script>
+
+</body>
+</html>

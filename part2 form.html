@@ -1,0 +1,62 @@
+<table class="styled-table">
+  <tr>
+    <th>Full Name</th>
+    <td><input type="text"></td>
+  </tr>
+
+  <tr>
+    <th>Gender</th>
+    <td>
+      <label><input type="radio" name="g"> Male</label>
+      <label><input type="radio" name="g"> Female</label>
+    </td>
+  </tr>
+
+  <tr>
+    <th>Hobbies</th>
+    <td>
+      <label><input type="checkbox"> Music</label>
+      <label><input type="checkbox"> Coding</label>
+    </td>
+  </tr>
+
+  <tr>
+    <th>Color Choice</th>
+    <td><input type="color"></td>
+  </tr>
+
+  <tr>
+    <th>Comment</th>
+    <td><textarea rows="3"></textarea></td>
+  </tr>
+
+  <tr>
+    <td colspan="2" style="text-align:center;">
+      <button class="submit-btn">Submit</button>
+    </td>
+  </tr>
+</table>
+
+<style>
+.styled-table {
+  border-collapse: collapse;
+  margin: 20px auto;
+  width: 60%;
+}
+
+.styled-table th, .styled-table td {
+  padding: 12px;
+  border: 1px solid #ccc;
+}
+
+.submit-btn {
+  padding: 10px 20px;
+  background: #0077ff;
+  border: none;
+  color: white;
+  cursor: pointer;
+}
+.submit-btn:hover {
+  background: #005fcc;
+}
+</style>
